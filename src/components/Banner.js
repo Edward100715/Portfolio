@@ -51,7 +51,8 @@ const period = 2000;
                     <Col xs={12} md={6} xl={7}>
                         <span className="tagline">Bienvenido a mi portafolio!</span>
                         <h1>{`Hola! Soy Edward, Desarrollador `}<span className="wrap">{text}</span></h1>
-                        <p>Soy una persona con compromiso acorde a mi responsabilidad, poseo una mente metódica, lo que me permite identificar patrones y tendencias a través de la observación y recolección de información. Además, que soy una persona que nunca me conformo con los conocimientos adquiridos y siempre estoy en busca de nuevas oportunidades de aprender y crecer. Con capacidad de solucionar los desafíos y cambios que se presentan en el entorno laboral y tecnológico de manera eficiente, sin perder la calma o el enfoque a los objetivos.</p>
+                        <p>Soy una persona con compromiso acorde a mi responsabilidad, poseo una mente metódica, lo que me permite identificar patrones y tendencias a través de la observación y recolección de información. 
+                            Además, que soy una persona que nunca me conformo con los conocimientos adquiridos y siempre estoy en busca de nuevas oportunidades de aprender y crecer. Con capacidad de solucionar los desafíos y cambios que se presentan en el entorno laboral y tecnológico de manera eficiente, sin perder la calma o el enfoque a los objetivos.</p>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                         <img src={headerImg} alt="Header" />
