@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "Edward100715.github.io/Portfolio",
+  "homepage": "http://edward100715.github.io/Portfolio/",
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@mailchimp/mailchimp_marketing": "^3.0.80",
