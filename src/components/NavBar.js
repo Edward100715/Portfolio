@@ -30,7 +30,9 @@ export const NavBar = () => {
         <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
             <Container>
                 <Navbar.Brand href="/">
-                    <img src={logo} alt="Logo" />
+                    <a href="https://edward100715.github.io/Portfolio/">
+                        <img src={logo} alt="Logo" />
+                    </a>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav">
                     <span className="navbar-toggler-icon"></span>
@@ -46,7 +48,7 @@ export const NavBar = () => {
                             <a href="https://www.linkedin.com/in/edward-bermudez-silva-884113267/"><img src={navIcon1} alt=""></img></a>
                             <a href="https://github.com/Edward100715"><img src={navIcon4} alt=""></img></a>
                         </div>
-                        <a href="/CV.pdf" target="_blank" rel="noopener noreferrer">
+                        <a href="/Portfolio/CV.pdf" target="_blank" rel="noopener noreferrer">
                             <button>Ver CV</button>
                         </a>
                     </span>
