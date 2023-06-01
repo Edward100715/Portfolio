@@ -1,8 +1,14 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import zurbe from "../assets/img/zurbe.png";
+import zurbe1 from "../assets/img/zurbe1.png";
+import zurbe2 from "../assets/img/zurbe2.png";
 import velas from "../assets/img/velas.png";
+import velas1 from "../assets/img/velas1.png";
+import velas2 from "../assets/img/velas2.png";
 import crud from "../assets/img/crud.png";
+import crud1 from "../assets/img/crud1.png";
+import crud2 from "../assets/img/crud2.png";
 
 export const Projects = () => {
 
@@ -13,6 +19,23 @@ export const Projects = () => {
             imgUrl: zurbe,
         },
     ];
+
+    const projects11 = [
+        {
+            title: "Proyecto - Inmobiliaria Zurbe",
+            description: "Con sus diferentes secciones de propiedades",
+            imgUrl: zurbe1,
+        },
+    ];
+
+    const projects111 = [
+        {
+            title: "Proyecto - Inmobiliaria Zurbe",
+            description: "En la parte inferior con sus enlaces de redes sociales y formulario de contacto",
+            imgUrl: zurbe2,
+        },
+    ];
+
     const projects2 = [
         {
             title: "Tienda virtual",
@@ -21,11 +44,43 @@ export const Projects = () => {
         },
     ];
 
+    const projects22 = [
+        {
+            title: "Tienda virtual",
+            description: "Parte de toda la sección de productos",
+            imgUrl: velas1,
+        },
+    ];
+
+    const projects222 = [
+        {
+            title: "Tienda virtual",
+            description: "Terminos y condiciones",
+            imgUrl: velas2,
+        },
+    ];
+
     const projects3 = [
         {
             title: "Crud - PHP",
-            description: "Crud utilizando HTML, CSS, PHP nativo, JavaScript y MySQL",
+            description: "Listado de los registros",
             imgUrl: crud,
+        },
+    ];
+
+    const projects33 = [
+        {
+            title: "Crud - PHP",
+            description: "Seccion con formulario para ingresar nuevos usuarios",
+            imgUrl: crud1,
+        },
+    ];
+
+    const projects333 = [
+        {
+            title: "Crud - PHP",
+            description: "Sección con formulario para actualizar los usuarios mediante el ID",
+            imgUrl: crud2,
         },
     ];
 
@@ -63,6 +118,26 @@ export const Projects = () => {
                                                 )
                                             })
                                         }
+                                        {
+                                            projects11.map((project, index) => {
+                                                return (
+                                                    <ProjectCard
+                                                        key={index}
+                                                        {...project}
+                                                    />
+                                                )
+                                            })
+                                        }
+                                        {
+                                            projects111.map((project, index) => {
+                                                return (
+                                                    <ProjectCard
+                                                        key={index}
+                                                        {...project}
+                                                    />
+                                                )
+                                            })
+                                        }
                                     </Row>
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="second">
@@ -79,6 +154,26 @@ export const Projects = () => {
                                                 )
                                             })
                                         }
+                                        {
+                                            projects22.map((project, index) => {
+                                                return (
+                                                    <ProjectCard
+                                                        key={index}
+                                                        {...project}
+                                                    />
+                                                )
+                                            })
+                                        }
+                                        {
+                                            projects222.map((project, index) => {
+                                                return (
+                                                    <ProjectCard
+                                                        key={index}
+                                                        {...project}
+                                                    />
+                                                )
+                                            })
+                                        }
                                     </Row>
                                     </button>
                                     </a>
@@ -87,6 +182,26 @@ export const Projects = () => {
                                     <Row>
                                         {
                                             projects3.map((project, index) => {
+                                                return (
+                                                    <ProjectCard
+                                                        key={index}
+                                                        {...project}
+                                                    />
+                                                )
+                                            })
+                                        }
+                                        {
+                                            projects33.map((project, index) => {
+                                                return (
+                                                    <ProjectCard
+                                                        key={index}
+                                                        {...project}
+                                                    />
+                                                )
+                                            })
+                                        }
+                                        {
+                                            projects333.map((project, index) => {
                                                 return (
                                                     <ProjectCard
                                                         key={index}
