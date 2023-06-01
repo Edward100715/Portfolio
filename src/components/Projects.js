@@ -99,7 +99,7 @@ export const Projects = () => {
                                     <Nav.Link eventKey="first">Inmobiliaria</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="second">Tienda virtual</Nav.Link>
+                                    <Nav.Link eventKey="second">Pagina Web</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
                                     <Nav.Link eventKey="third">Crud PHP</Nav.Link>
