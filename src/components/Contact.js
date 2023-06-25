@@ -1,49 +1,43 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import db from "./firebase";
+import { collection, addDoc } from "firebase/firestore";
 import { Container, Row, Col } from "react-bootstrap";
 import contacting from "../assets/img/contact-img.svg";
 
 export const Contact = () => {
-    const formInitialDetails = {
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        message: "",
-    };
-
-    const [formDetails, setFormDetails] = useState(formInitialDetails);
-    const [buttonText, setButtonText] = useState("Enviar");
-    const [status, setStatus] = useState({});
-    const [isFormValid, setIsFormValid] = useState(false);
-
-    useEffect(() => {
-        const { firstName, lastName, email, phone, message } = formDetails;
-        const isValid =
-            firstName !== "" &&
-            lastName !== "" &&
-            email !== "" &&
-            phone !== "" &&
-            message !== "";
-        setIsFormValid(isValid);
-    }, [formDetails]);
-
-    const onFormUpdate = (category, value) => {
-        setFormDetails({
-            ...formDetails,
-            [category]: value,
-        });
-    };
+    // Estado del formulario
+    const [nombre, setNombre] = useState("");
+    const [apellido, setApellido] = useState("");
+    const [correo, setCorreo] = useState("");
+    const [telefono, setTelefono] = useState("");
+    const [mensaje, setMensaje] = useState("");
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setButtonText("Enviando...");
 
-        setTimeout(function () {
-            setButtonText("Enviado");
-            setFormDetails(formInitialDetails); // Restablece los datos del formulario al valor inicial
-            alert("El mensaje a sido enviado exitosamente!")
-        }, 2000);
+        try {
+            const docRef = await addDoc(collection(db, "usuarios"), {
+                nombre: nombre,
+                apellido: apellido,
+                correo: correo,
+                telefono: telefono,
+                mensaje: mensaje,
+            });
+
+            alert("Mensaje enviado exitosamente!");
+            // Restablecer los campos del formulario
+            setNombre("");
+            setApellido("");
+            setCorreo("");
+            setTelefono("");
+            setMensaje("");
+        } catch (error) {
+            alert("Hubo un error al postularse:", error);
+        }
     };
+
+    // Verifica si todos los campos están llenos
+    const isFormValid = nombre && apellido && correo && telefono && mensaje;
 
     return (
         <section className="contact" id="contact">
@@ -59,67 +53,46 @@ export const Contact = () => {
                                 <Col xs={12} sm={6} className="px-1">
                                     <input
                                         type="text"
-                                        value={formDetails.firstName}
                                         placeholder="Nombre"
-                                        onChange={(e) =>
-                                            onFormUpdate("firstName", e.target.value)
-                                        }
+                                        value={nombre}
+                                        onChange={(e) => setNombre(e.target.value)}
                                     />
                                 </Col>
                                 <Col xs={12} sm={6} className="px-1">
-                                    <input
+                                <input
                                         type="text"
-                                        value={formDetails.lastName}
                                         placeholder="Apellido"
-                                        onChange={(e) =>
-                                            onFormUpdate("lastName", e.target.value)
-                                        }
+                                        value={apellido}
+                                        onChange={(e) => setApellido(e.target.value)}
                                     />
                                 </Col>
                                 <Col xs={12} sm={6} className="px-1">
-                                    <input
+                                <input
                                         type="email"
-                                        value={formDetails.email}
-                                        placeholder="Correo"
-                                        onChange={(e) => onFormUpdate("email", e.target.value)}
+                                        placeholder="Correo electrónico"
+                                        value={correo}
+                                        onChange={(e) => setCorreo(e.target.value)}
                                     />
                                 </Col>
                                 <Col xs={12} sm={6} className="px-1">
-                                    <input
+                                <input
                                         type="tel"
-                                        value={formDetails.phone}
-                                        placeholder="Nro. Telefono"
-                                        onChange={(e) => onFormUpdate("phone", e.target.value)}
+                                        placeholder="Telefono celular"
+                                        value={telefono}
+                                        onChange={(e) => setTelefono(e.target.value)}
                                     />
                                 </Col>
                                 <Col xs={12} className="px-1">
-                                    <textarea
-                                        rows="6"
-                                        value={formDetails.message}
+                                    <input
+                                        type="text"
                                         placeholder="Mensaje"
-                                        onChange={(e) =>
-                                            onFormUpdate("message", e.target.value)
-                                        }
-                                    ></textarea>
-                                    <button
-                                        type="submit"
-                                        disabled={!isFormValid}
-                                        className={!isFormValid ? "transparent-button" : ""}
-                                    >
-                                        <span>{buttonText}</span>
+                                        value={mensaje}
+                                        onChange={(e) => setMensaje(e.target.value)}
+                                    />
+                                    <button type="submit" disabled={!isFormValid}>
+                                        <span>Enviar</span>
                                     </button>
                                 </Col>
-                                {status.message && (
-                                    <Col>
-                                        <p
-                                            className={
-                                                status.success === false ? "danger" : "success"
-                                            }
-                                        >
-                                            {status.message}
-                                        </p>
-                                    </Col>
-                                )}
                             </Row>
                         </form>
                     </Col>
