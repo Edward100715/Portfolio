@@ -7,6 +7,10 @@ import skill6 from "../assets/img/skill6.png";
 import skill7 from "../assets/img/skill7.png";
 import skill8 from "../assets/img/skill8.png";
 import skill9 from "../assets/img/skill9.png";
+import skill10 from "../assets/img/skill10.png";
+import skill11 from "../assets/img/skill11.png";
+import skill12 from "../assets/img/skill12.png";
+import skill13 from "../assets/img/skill13.png";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import colorSharp from "../assets/img/color-sharp.png"
@@ -55,26 +59,42 @@ return (
                             </div>
                             <div className="item">
                                 <img src={skill4} alt="Skill4" />
-                                <h5>React.js</h5>
-                            </div>
-                            <div className="item">
-                                <img src={skill5} alt="Skill5" />
                                 <h5>PHP</h5>
                             </div>
                             <div className="item">
-                                <img src={skill6} alt="Skill6" />
-                                <h5>MySQL</h5>
-                            </div>
-                            <div className="item">
-                                <img src={skill7} alt="Skill7" />
-                                <h5>XML</h5>
-                            </div>
-                            <div className="item">
-                                <img src={skill8} alt="Skill8" />
+                                <img src={skill5} alt="Skill5" />
                                 <h5>Python</h5>
                             </div>
                             <div className="item">
+                                <img src={skill6} alt="Skill6" />
+                                <h5>WordPress</h5>
+                            </div>
+                            <div className="item">
+                                <img src={skill7} alt="Skill7" />
+                                <h5>React.js</h5>
+                            </div>
+                            <div className="item">
+                                <img src={skill8} alt="Skill8" />
+                                <h5>Jquery</h5>
+                            </div>
+                            <div className="item">
                                 <img src={skill9} alt="Skill9" />
+                                <h5>Bootstrap</h5>
+                            </div>
+                            <div className="item">
+                                <img src={skill10} alt="Skill10" />
+                                <h5>Node.js</h5>
+                            </div>
+                            <div className="item">
+                                <img src={skill11} alt="Skill11" />
+                                <h5>MySQL</h5>
+                            </div>
+                            <div className="item">
+                                <img src={skill12} alt="Skill12" />
+                                <h5>FireBase</h5>
+                            </div>
+                            <div className="item">
+                                <img src={skill13} alt="Skill13" />
                                 <h5>Git</h5>
                             </div>
                         </Carousel>
