@@ -284,11 +284,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .banner .tagline {
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   padding: 8px 10px;
   background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
   border: 1px solid rgba(255, 255, 255, 0.5);
-  font-size: 22px;
+  font-size: 20px;
   margin-bottom: 80px;
   display: inline-block;
 }
